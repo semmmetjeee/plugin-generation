@@ -1,0 +1,13 @@
+name: MythicMaces
+version: 1.0.0
+main: nl.semmmetje.maces.MythicMacesPlugin
+api-version: '1.21'
+author: Semmmetje
+description: Twenty cinematic PvP maces for Paper.
+commands:
+  mace:
+    description: Give a mythic mace.
+    usage: /mace give <player> <mace>
+permissions:
+  mythicmaces.admin:
+    default: op
