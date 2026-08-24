@@ -14,7 +14,7 @@ import org.bukkit.potion.*;
 import org.bukkit.util.Vector;
 
 public final class MythicMacesPlugin extends JavaPlugin implements Listener, CommandExecutor, TabCompleter {
- private NamespacedKey typeKey; private final Map<UUID,Long> cooldowns=new HashMap<>();
+ private NamespacedKey typeKey; private final Map<Long,Long> cooldowns=new HashMap<>();
  @Override public void onEnable(){typeKey=new NamespacedKey(this,"mythic_mace");getServer().getPluginManager().registerEvents(this,this);Objects.requireNonNull(getCommand("mace")).setExecutor(this);getCommand("mace").setTabCompleter(this);}
  private MaceType type(ItemStack item){if(item==null||item.getType()!=Material.MACE||!item.hasItemMeta())return null;String raw=item.getItemMeta().getPersistentDataContainer().get(typeKey,PersistentDataType.STRING);try{return raw==null?null:MaceType.valueOf(raw);}catch(IllegalArgumentException e){return null;}}
  private ItemStack item(MaceType t){ItemStack i=new ItemStack(Material.MACE);ItemMeta m=i.getItemMeta();m.setDisplayName(t.color+t.title);m.setLore(List.of(ChatColor.GRAY+t.description,ChatColor.DARK_GRAY+"Unique mythic mace",ChatColor.YELLOW+"Right-click: inspect"));m.getPersistentDataContainer().set(typeKey,PersistentDataType.STRING,t.name());i.setItemMeta(m);return i;}
