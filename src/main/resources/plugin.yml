@@ -1,15 +1,13 @@
-name: LastLantern
+name: MythicMaces
 version: 1.0.0
-main: nl.semmmetje.lanterns.LastLanternPlugin
+main: nl.semmmetje.maces.MythicMacesPlugin
 api-version: '1.21'
 author: Semmmetje
-description: A living-lantern progression system for survival servers.
+description: Twenty cinematic PvP maces for Paper.
 commands:
-  lantern:
-    description: Open your Last Lantern.
-    aliases: [ll, lastlantern]
+  mace:
+    description: Give a mythic mace.
+    usage: /mace give <player> <mace>
 permissions:
-  lastlantern.use:
-    default: true
-  lastlantern.admin:
+  mythicmaces.admin:
     default: op
