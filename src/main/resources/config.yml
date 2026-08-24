@@ -1,0 +1,5 @@
+max-level: 12
+base-memory-goal: 120
+memory-goal-per-level: 80
+ritual-radius: 12
+ritual-duration-seconds: 180
