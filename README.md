@@ -1,28 +1,23 @@
-# The Last Lantern
+# Mythic Maces
 
-A premium-style **single-feature** progression plugin for Paper survival, Skyblock and Oneblock servers.
+Twenty cinematic PvP maces for modern Paper survival, Skyblock and Oneblock servers.
 
-Every player owns one soul lantern. It remembers real survival play—mining, harvesting, hunting and fishing—then lets the player spend those memories on one temporary ritual at a time.
+Every mace is a real Mace item marked with persistent data. On hit it triggers a unique combat effect with particles, sound and an internal cooldown: freeze, lightning, void pull, fire, poison, knockback, gravity, sonic shockwave, healing, teleport, area damage and more.
 
-## Gameplay loop
+## Give command
 
-- A personal lantern is granted automatically on first join.
-- Right-click it or use `/lantern` to open its inventory GUI.
-- Build four memory types through normal gameplay and level the lantern.
-- Spend a selected memory to ignite a three-minute ritual.
+`/mace give <player> <mace>`
 
-| Ritual | Effect |
-|---|---|
-| Rootsong | Gently advances nearby crops. |
-| Deepsight | Marks nearby ores with particles, with no permanent world changes. |
-| Moonward | Keeps monsters away inside the ritual radius. |
-| Tidecall | Gives swimming players Dolphin's Grace and water breathing. |
+Examples: `/mace give Semm frostbind`, `/mace give Semm stasis`, `/mace give Semm celestial`.
 
-## Install
+Tab completion lists all 20 IDs. Requires `mythicmaces.admin` (OP by default).
 
-Requires **Java 21** and modern Paper. Run `mvn clean package`, copy the generated jar into `plugins/`, then restart. Configure goals, radius, duration and levels in `plugins/LastLantern/config.yml`.
+## Build
 
-## Commands
+Java 21 and modern Paper are required:
 
-- `/lantern` — open the Lantern UI.
-- `/lantern give [player]` — create a replacement lantern (OP only).
+```bash
+mvn clean package
+```
+
+Copy the generated jar to your server's `plugins/` directory and restart.
