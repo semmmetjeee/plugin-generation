@@ -1,0 +1,15 @@
+name: LastLantern
+version: 1.0.0
+main: nl.semmmetje.lanterns.LastLanternPlugin
+api-version: '1.21'
+author: Semmmetje
+description: A living-lantern progression system for survival servers.
+commands:
+  lantern:
+    description: Open your Last Lantern.
+    aliases: [ll, lastlantern]
+permissions:
+  lastlantern.use:
+    default: true
+  lastlantern.admin:
+    default: op
